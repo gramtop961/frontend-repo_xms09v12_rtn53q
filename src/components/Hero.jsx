@@ -2,13 +2,20 @@ import Spline from '@splinetool/react-spline';
 
 export default function Hero() {
   return (
-    <section id="beranda" className="relative">
+    <section id="beranda" className="relative min-h-screen">
+      {/* 3D background */}
       <div className="absolute inset-0">
-        <Spline scene="https://prod.spline.design/5t0jC2V5v1GZzqD7/scene.splinecode" style={{ width: '100%', height: '100%' }} />
+        <Spline
+          scene="https://prod.spline.design/5t0jC2V5v1GZzqD7/scene.splinecode"
+          style={{ width: '100%', height: '100%' }}
+        />
       </div>
-      <div className="relative isolate">
+
+      {/* Content layer */}
+      <div className="relative isolate flex min-h-screen items-center">
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/60 via-white/70 to-white" />
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-28 sm:py-36">
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
           <div className="max-w-2xl">
             <span className="inline-flex items-center rounded-full bg-amber-100 px-3 py-1 text-xs font-medium text-amber-800 ring-1 ring-inset ring-amber-200">
               Roti Fresh Setiap Hari
